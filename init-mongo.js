@@ -1,2 +1,2 @@
-db = db.getSiblingDB('end2end');
-db.createCollection('myValenbisi');
+db = db.getSiblingDB('myDatabase');
+db.createCollection('myCollection');

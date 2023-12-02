@@ -13,7 +13,9 @@ services:
       - SINGLE_USER_CREDENTIALS_PASSWORD=ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
     volumes:
       - ./data:/tmp/data
-    
+      - ./nifi/flow.xml:/opt/nifi/nifi-current/conf/flow.xml
+      - ./nifi_autocharge.py:/nifi_autocharge.py
+    # command: sh -c 'nifi.sh start && python /nifi_autocharge.py'
   nifi-registry:
     image: apache/nifi-registry:latest
     container_name: nifiregistry
